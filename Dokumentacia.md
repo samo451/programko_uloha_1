@@ -1,53 +1,53 @@
-#Dokumentácia k DÚ è. 1
-#Kalkulátor vybranıch valcovıch zobrazení
+#DokumentÃ¡cia k DÃš Ä. 1
+#KalkulÃ¡tor vybranÃ½ch valcovÃ½ch zobrazenÃ­
 
 ##Charakteristika programu:
-Program slúi na vıpis súradníc zadaného valcového zobrazenia, pri zadanej 
-mierke a polomere telesa po desiatich stupòoch pre poludníky i rovnobeky. 
-Podobne môe, pod¾a vôle pouívate¾a, vypísa súradnice zadané pouívate¾om 
+Program slÃºÅ¾i na vÃ½pis sÃºradnÃ­c zadanÃ©ho valcovÃ©ho zobrazenia, pri zadanej 
+mierke a polomere telesa po desiatich stupÅˆoch pre poludnÃ­ky i rovnobeÅ¾ky. 
+Podobne mÃ´Å¾e, podÄ¾a vÃ´le pouÅ¾Ã­vateÄ¾a, vypÃ­saÅ¥ sÃºradnice zadanÃ© pouÅ¾Ã­vateÄ¾om 
 aj na mape.
 ##Beh programu:
-1)	Po spustení sa program opıta na mierkové èíslo. Zadáva sa celoèíselnı 
-	vstup. V prípade, e zadanı vstup nie je celé èíslo, program sa domáha 
+1)	Po spustenÃ­ sa program opÃ½ta na mierkovÃ© ÄÃ­slo. ZadÃ¡va sa celoÄÃ­selnÃ½ 
+	vstup. V prÃ­pade, Å¾e zadanÃ½ vstup nie je celÃ© ÄÃ­slo, program sa domÃ¡ha 
 	jeho zadania.
-2)	Po zadní mierkového èísla si program vyiada polomer telesa v kilometroch. 
-	V prípade zadania èísla „0“ sa pouije preddefinovanı polomer pre planétu 
-	Zem 6371,11 km. V prípade zadania neèíselného vstupu sa program domáha 
-	jeho zadania a zároveò zobrazuje nápovedu oh¾adom èísla 0.
-3)	Ïalej program poaduje zobrazenie. Zobrazenia sú nasledovné: 
+2)	Po zadnÃ­ mierkovÃ©ho ÄÃ­sla si program vyÅ¾iada polomer telesa v kilometroch. 
+	V prÃ­pade zadania ÄÃ­sla â€0â€œ sa pouÅ¾ije preddefinovanÃ½ polomer pre planÃ©tu 
+	Zem 6371,11 km. V prÃ­pade zadania neÄÃ­selnÃ©ho vstupu sa program domÃ¡ha 
+	jeho zadania a zÃ¡roveÅˆ zobrazuje nÃ¡povedu ohÄ¾adom ÄÃ­sla 0.
+3)	Äalej program poÅ¾aduje zobrazenie. Zobrazenia sÃº nasledovnÃ©: 
 	A = Marinovo zobrazenie, B = Braunovo zobrazenie, L = Lanbertovo zobrazenie 
-	a M = Mercatorovo zobrazenie. V prípade chybného zadania vypíše program 
-	chybovú hlášku s monosou nápovedi, ktorá sa zadáva písmenom H.
-4)	Program vypíše hodnoty pre rovnobeky aj poludníky za sebou, oddelené 
-	medzerou. V prípade, e hodnota presahuje hodnotu 100, resp. -100, 
-	vypíše sa pomlèka.
-5)	Následne program ponúka monos na ukonèenie programu (stlaèením klávesy 
-	enter), alebo monosou zadania vlastnıch súradníc (zadanie do vstupu S), 
-	ktorım urèí ich polohu na mape.
-6)	Uívate¾ zadá hodnoty geografickej šírky a dåky, prièom program 
-	kontroluje, èi zadáva èíslo a zároveò, èi nepresahuje 90, resp. 180 stupòov 
-	a upozoròuje na chybu.
-7)	Vypíšu sa hodnoty zadanıch súradníc a zároveò i ich ekvivalent na mape. 
-	Následne pokraèuje program bodom è. 5.
+	a M = Mercatorovo zobrazenie. V prÃ­pade chybnÃ©ho zadania vypÃ­Å¡e program 
+	chybovÃº hlÃ¡Å¡ku s moÅ¾nosÅ¥ou nÃ¡povedi, ktorÃ¡ sa zadÃ¡va pÃ­smenom H.
+4)	Program vypÃ­Å¡e hodnoty pre rovnobeÅ¾ky aj poludnÃ­ky za sebou, oddelenÃ© 
+	medzerou. V prÃ­pade, Å¾e hodnota presahuje hodnotu 100, resp. -100, 
+	vypÃ­Å¡e sa pomlÄka.
+5)	NÃ¡sledne program ponÃºka moÅ¾nosÅ¥ na ukonÄenie programu (stlaÄenÃ­m klÃ¡vesy 
+	enter), alebo moÅ¾nosÅ¥ou zadania vlastnÃ½ch sÃºradnÃ­c (zadanie do vstupu S), 
+	ktorÃ½m urÄÃ­ ich polohu na mape.
+6)	UÅ¾Ã­vateÄ¾ zadÃ¡ hodnoty geografickej Å¡Ã­rky a dÄºÅ¾ky, priÄom program 
+	kontroluje, Äi zadÃ¡va ÄÃ­slo a zÃ¡roveÅˆ, Äi nepresahuje 90, resp. 180 stupÅˆov 
+	a upozorÅˆuje na chybu.
+7)	VypÃ­Å¡u sa hodnoty zadanÃ½ch sÃºradnÃ­c a zÃ¡roveÅˆ i ich ekvivalent na mape. 
+	NÃ¡sledne pokraÄuje program bodom Ä. 5.
 
-###Rovnice zobrazení:
+###Rovnice zobrazenÃ­:
 
-#####Pre všetky zobrazenie:
+#####Pre vÅ¡etky zobrazenia:
 x = R * v
 
-#####A – Marinovo zobrazenie:
+#####A â€“ Marinovo zobrazenie:
 y = R * u
 
-#####B – Braunovo zobrazenie:
+#####B â€“ Braunovo zobrazenie:
 y = 2R * tg(u/2)
 
-#####L – Lambertovo zobrazenie:
+#####L â€“ Lambertovo zobrazenie:
 y = R * sin(u)
 
-#####M – Mercatorovo zobrazenie:
+#####M â€“ Mercatorovo zobrazenie:
 y = R * ln(1/tan(u/2))
 
 ######Vysvetlivky:
 R = polomer telesa
-v = geografická dåka
-u = geografická šírka
+v = geografickÃ¡ dÄºÅ¾ka
+u = geografickÃ¡ Å¡Ã­rka
