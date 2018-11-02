@@ -1,27 +1,32 @@
 from math import tan, sin, log, radians, inf
 
 def vypocet_x(R, v):
-    """Výpočet x-kových súradníc v mierke 1:1 pre vš. zobrazenia. Vstup: polomer telesa a súradnica."""
+    """Výpočet x-kových súradníc v mierke 1:1 pre vš. zobrazenia.
+    Vstup: polomer telesa a súradnica."""
     return R * radians(v)
 
 
 def vypocet_y_A(R, u):
-    """Výpočet y-vých súradníc v mierke 1:1 pre Marinovo zobrazenie. Vstup: polomer telesa a súradnica."""
+    """Výpočet y-vých súradníc v mierke 1:1 pre Marinovo zobrazenie.
+    Vstup: polomer telesa a súradnica."""
     return R * radians(u)
 
 
 def vypocet_y_B(R, u):
-    """Výpočet y-vých súradníc v mierke 1:1 pre Braunovo zobrazenie. Vstup: polomer telesa a súradnica."""
+    """Výpočet y-vých súradníc v mierke 1:1 pre Braunovo zobrazenie.
+    Vstup: polomer telesa a súradnica."""
     return 2 * R * (tan(radians(u) / 2))
 
 
 def vypocet_y_L(R, u):
-    """Výpočet y-vých súradníc v mierke 1:1 pre Lambertovo zobrazenie. Vstup: polomer telesa a súradnica."""
+    """Výpočet y-vých súradníc v mierke 1:1 pre Lambertovo zobrazenie.
+    Vstup: polomer telesa a súradnica."""
     return R * sin(radians(u))
 
 
 def vypocet_y_M(R, u):
-    """Výpočet y-vých súradníc v mierke 1:1 pre Mercatorovo zobrazenie. Vstup: polomer telesa a súradnica."""
+    """Výpočet y-vých súradníc v mierke 1:1 pre Mercatorovo zobrazenie.
+    Vstup: polomer telesa a súradnica."""
     if abs(u) == 90:
         return float(inf)
     else:
