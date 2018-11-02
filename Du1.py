@@ -1,4 +1,4 @@
-from math import tan, sin, log, radians
+from math import tan, sin, log, radians, inf
 
 def vypocet_x(R, v):
     """Výpočet x-kových súradníc v mierke 1:1 pre vš. zobrazenia. Vstup: polomer telesa a súradnica."""
@@ -23,7 +23,7 @@ def vypocet_y_L(R, u):
 def vypocet_y_M(R, u):
     """Výpočet y-vých súradníc v mierke 1:1 pre Mercatorovo zobrazenie. Vstup: polomer telesa a súradnica."""
     if abs(u) == 90:
-        return 9999999999
+        return float(inf)
     else:
         return R*log(1/tan(radians(90-u)/2))
 
@@ -49,17 +49,14 @@ def generovanie_y(zobrazenie, M, R):
     Výstup: Zoznam súradníc "y" v zozname po 10° od -90° do 90°, prevedené na centimetre pri danej mierke na
     zobrazovacú plochu """
     y = []
-    if zobrazenie == "A":
-        for i in range(-90, 100, 10):
+    for i in range(-90, 100, 10):
+        if "A" in zobrazenie:
             y.append(prevod_na_cm(vypocet_y_A(R, i), M))
-    elif zobrazenie == "B":
-        for i in range(-90, 100, 10):
+        elif "B" in zobrazenie:
             y.append(prevod_na_cm(vypocet_y_B(R, i), M))
-    elif zobrazenie == "L":
-        for i in range(-90, 100, 10):
+        elif "L" in zobrazenie:
             y.append(prevod_na_cm(vypocet_y_L(R, i), M))
-    else:
-        for i in range(-90, 100, 10):
+        else:
             y.append(prevod_na_cm(vypocet_y_M(R, i), M))
     return y
 
@@ -110,9 +107,11 @@ def zadanie_R():
             R = float(vstup)
             if R == 0:
                 R = 6371.11
+                break
+            elif R <= 0:
+                print("Zadali ste záporné číslo!")
             else:
-                continue
-            break
+                break
         except:
             print("Nezadali ste číslo! V prípade, že chcete predefinovaný polomer, zadajte 0")
     return R
@@ -124,7 +123,10 @@ def zadanie_M():
         vstup = input("Zadaj mierkové číslo: ")
         try:
             M = int(vstup)
-            return M
+            if M <= 0:
+                print("Zadali ste záporné číslo!")
+            else:
+                return M
         except:
             print("Nezadali ste celé číslo!")
 
@@ -154,11 +156,11 @@ def vypis_suradnic_xy(x, y, zobrazenie, M, R):
     Vstup: Súradnice x a y [float], zobrazenie (podľa dokumentácie), mierka [int] a polomer telesa [float].
     Výstup: Vypísané súradnice na mape v cm. """
     x_mapa = prevod_na_cm(vypocet_x(R, x), M)
-    if zobrazenie == "A":
+    if "A" in zobrazenie:
         y_mapa = prevod_na_cm(vypocet_y_A(R, y), M)
-    elif zobrazenie == "B":
+    elif "B" in zobrazenie:
         y_mapa = prevod_na_cm(vypocet_y_B(R, y), M)
-    elif zobrazenie == "M":
+    elif "M" in zobrazenie:
         y_mapa = prevod_na_cm(vypocet_y_M(R, y), M)
     else:
         y_mapa = prevod_na_cm(vypocet_y_L(R, y), M)

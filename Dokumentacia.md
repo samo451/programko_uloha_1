@@ -1,12 +1,12 @@
-#Dokumentácia k DÚ č. 1
-#Kalkulátor vybraných valcových zobrazení
+# Dokumentácia k DÚ č. 1
+# Kalkulátor vybraných valcových zobrazení
 
-##Charakteristika programu:
+## Charakteristika programu:
 Program slúži na výpis súradníc zadaného valcového zobrazenia, pri zadanej 
 mierke a polomere telesa po desiatich stupňoch pre poludníky i rovnobežky. 
 Podobne môže, podľa vôle používateľa, vypísať súradnice zadané používateľom 
 aj na mape.
-##Beh programu:
+## Beh programu:
 1)	Po spustení sa program opýta na mierkové číslo. Zadáva sa celočíselný 
 	vstup. V prípade, že zadaný vstup nie je celé číslo, program sa domáha 
 	jeho zadania.
@@ -30,24 +30,24 @@ aj na mape.
 7)	Vypíšu sa hodnoty zadaných súradníc a zároveň i ich ekvivalent na mape. 
 	Následne pokračuje program bodom č. 5.
 
-###Rovnice zobrazení:
+### Rovnice zobrazení:
 
-#####Pre všetky zobrazenia:
+##### Pre všetky zobrazenia:
 x = R * v
 
-#####A – Marinovo zobrazenie:
+##### A – Marinovo zobrazenie:
 y = R * u
 
-#####B – Braunovo zobrazenie:
+##### B – Braunovo zobrazenie:
 y = 2R * tg(u/2)
 
-#####L – Lambertovo zobrazenie:
+##### L – Lambertovo zobrazenie:
 y = R * sin(u)
 
-#####M – Mercatorovo zobrazenie:
+##### M – Mercatorovo zobrazenie:
 y = R * ln(1/tan(u/2))
 
-######Vysvetlivky:
+###### Vysvetlivky:
 R = polomer telesa
 v = geografická dĺžka
 u = geografická šírka
